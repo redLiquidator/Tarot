@@ -1,0 +1,302 @@
+<!--
+▣ 실기시험 1 (40점 만점)
+-작성자 : 이진주 (5강의실)
+-주 제  : 타로운세를 보는 페이지
+-목 적  :  방문자의 타로운세를 보는 페이지를 제작한다. 
+(해석 발췌: 네이버블로거 tarotw님 http://blog.naver.com/tarotw/220017883489)
+(카드이미지: http://triple-m-art.deviantart.com/art/The-Rainbow-Tarot-Major-Arcana-473157512)
+(바탕화면: https://www.artstation.com/artwork/L3ZA0)
+-기 능 : 메뉴, 카드 애니메이션 
+-->
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+<title></title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="css/storyboard.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Alegreya+SC">
+</head>
+
+<body background="img/miss-swarm-wizard-room.jpg">
+<fieldset id="description">
+<legend>실기시험 1</legend>
+<ol>
+<li>작성자 : 이진주 </li>
+<li>주제: 타로운세를 보는 페이지</li>
+<li>목적: 방문자의 타로운세를 보는 페이지를 제작한다.</li>
+<li>기능: 메뉴만들기, 애니메이션 </li>
+</ol>
+</fieldset>
+
+<fieldset id="menu">
+<header>
+<h1>the House of Tarot</h1>
+</header>
+</fieldset>
+
+<fieldset>
+<div>
+<ul id="menu1">
+<li><a href="#" onclick="intoTheFront()">HOME</a></li>
+<li><a href="#" onclick="showCards()">Tarot Reading</a></li>
+</ul>
+</div>
+</fieldset>
+
+<h2 style="text-align:center">카드 한장을 클릭하세요</p>
+<h3 id="final">here is a description</h3>
+
+<fieldset class="le">
+<div class="container">
+<div class="card n1">
+	<div class="front" onclick="changeRotate(1)"><img src="img/click.png"></div>
+	<div class="back"><img class="a" src="img/thefool1.png" style="width:100px;"></div>
+</div>
+</div>
+
+<div class="container">
+<div class="card n2">
+	<div class="front" onclick="changeRotate(2)"><img src="img/click.png"></div>
+	<div class="back"><img class="a" src="img/themagician1.png"></div>
+</div>
+</div>
+
+<div class="container">
+<div class="card n3">
+	<div class="front" onclick="changeRotate(3)"><img src="img/click.png"></div>
+	<div class="back"><img class="a" src="img/thehighpriestess1.png"></div>
+</div>
+</div>
+
+<div class="container">
+<div class="card n4">
+	<div class="front" onclick="changeRotate(4)"><img src="img/click.png"></div>
+	<div class="back"><img class="a" src="img/theempress1.png"></div>
+</div>
+</div>
+
+<div class="container">
+<div class="card n5">
+	<div class="front" onclick="changeRotate(5)"><img src="img/click.png"></div>
+	<div class="back"><img class="a" src="img/theemperor1.png"></div>
+</div>
+</div>
+
+<div class="container">
+<div class="card n6">
+	<div class="front" onclick="changeRotate(6)"><img src="img/click.png"></div>
+	<div class="back"><img class="a" src="img/thehierophant1.png"></div>
+</div>
+</div>
+
+<div class="container">
+<div class="card n7">
+	<div class="front" onclick="changeRotate(7)"><img src="img/click.png"></div>
+	<div class="back"><img class="a" src="img/thelovers1.png"></div>
+</div>
+</div>
+
+<div class="container">
+<div class="card n8">
+	<div class="front" onclick="changeRotate(8)"><img src="img/click.png"></div>
+	<div class="back"><img class="a" src="img/thechariot1.png"></div>
+</div>
+</div>
+
+<div class="container">
+<div class="card n9">
+	<div class="front" onclick="changeRotate(9)"><img src="img/click.png"></div>
+	<div class="back"><img class="a" src="img/strength1.png"></div>
+</div>
+</div>
+
+<div class="container">
+<div class="card n10">
+	<div class="front" onclick="changeRotate(10)"><img src="img/click.png"></div>
+	<div class="back"><img class="a" src="img/thehermit1.png"></div>
+</div>
+</div>
+
+<div class="container">
+<div class="card n11">
+	<div class="front" onclick="changeRotate(11)"><img src="img/click.png"></div>
+	<div class="back"><img class="a" src="img/wheeloffortune1.png"></div>
+</div>
+</div>
+
+<div class="container">
+<div class="card n12">
+	<div class="front" onclick="changeRotate(12)"><img src="img/click.png"></div>
+	<div class="back"><img class="a" src="img/justice1.png"></div>
+</div>
+</div>
+
+<div class="container">
+<div class="card n13">
+	<div class="front" onclick="changeRotate(13)"><img src="img/click.png"></div>
+	<div class="back"><img class="a" src="img/thehangedman1.png"></div>
+</div>
+</div>
+
+<div class="container">
+<div class="card n14">
+	<div class="front" onclick="changeRotate(14)"><img src="img/click.png"></div>
+	<div class="back"><img class="a" src="img/death1.png"></div>
+</div>
+</div>
+
+<div class="container">
+<div class="card n15">
+	<div class="front" onclick="changeRotate(15)"><img src="img/click.png"></div>
+	<div class="back"><img class="a" src="img/temperance1.png"></div>
+</div>
+</div>
+
+<div class="container">
+<div class="card n16">
+	<div class="front" onclick="changeRotate(16)"><img src="img/click.png"></div>
+	<div class="back"><img class="a" src="img/thedevil1.png"></div>
+</div>
+</div>
+
+<div class="container">
+<div class="card n17">
+	<div class="front" onclick="changeRotate(17)"><img src="img/click.png"></div>
+	<div class="back"><img class="a" src="img/thetower1.png"></div>
+</div>
+</div>
+
+<div class="container">
+<div class="card n18">
+	<div class="front" onclick="changeRotate(18)"><img src="img/click.png"></div>
+	<div class="back"><img class="a" src="img/thestar1.png"></div>
+</div>
+</div>
+
+<div class="container">
+<div class="card n19">
+	<div class="front" onclick="changeRotate(19)"><img src="img/click.png"></div>
+	<div class="back"><img class="a" src="img/themoon1.png"></div>
+</div>
+</div>
+
+<div class="container">
+<div class="card n20">
+	<div class="front" onclick="changeRotate(20)"><img src="img/click.png"></div>
+	<div class="back"><img class="a" src="img/thesun1.png"></div>
+</div>
+</div>
+
+<div class="container">
+<div class="card n21">
+	<div class="front" onclick="changeRotate(21)"><img src="img/click.png"></div>
+	<div class="back"><img class="a" src="img/judgement1.png"></div>
+</div>
+</div>
+
+<div class="container">
+<div class="card n22">
+	<div class="front" onclick="changeRotate(22)"><img src="img/click.png"></div>
+	<div class="back"><img class="a" src="img/theworld1.png"></div>
+</div>
+</div>
+</fieldset>
+
+<a href="#" class="button" onclick="showResult()">결과보기</a>
+
+<p id="result1" class="Describe">the Fool</br>
+직업운/ 조각가,사회복지사, 1인사업에 맞습니다.</br>
+건강운/ 건망증,우울증에 주의하세요. </br>
+연애운/ 자유로운 사고방식을 가진 연인이 나타납니다.</p>
+<p id="result2" class="Describe">the Magician</br>
+직업운/ 엔지니어, 과학자, 협상가, 컨설턴트등 아이디어를 내는데 뛰어난 재능이 있습니다.</br>
+손끝이 좋아 손재주를 살릴수 있는 직업이 좋습니다. 디자이너나 아이디어뱅크 마케팅 분야도 좋을것 같습니다.</br>
+건강운/ 두통 등 머리에 관련된 질병, 빈혈, 혈액순환 장애가 있을수 있습니다. 식이요법을 조절하고 피를 맑게 해주세요.</br>
+연애운/ 즐거운 연애, 새로운 연애의 시작, 적극적으로 즐거운 연애를 하는 분이군요. 주도권을 잡을수 있는 기회가 옵니다. </p>
+<p id="result3" class="Describe">the High Priestess</br>
+직업운/ 선생님, 종교인, 대학교수등이 어울립니다. 곧고바르며 소심하기도 하지만 전달력은 좋습니다.</br>
+화술을 개발할 필요가 있습니다.</br>
+건강운/ 여성인 경우 건강에 유방, 자궁등에 주의하셔야 합니다. </br>
+연애운/ 연애에 대해 적극적이지 못합니다. 자신감을 가지세요.</p>
+<p id="result4" class="Describe">the Empress</br>
+직업운/ 요리사, 원예가 등의 활동에 어울립니다.</br>
+건강운/ 여성인 경우 자궁외임신, 부인과쪽 질환에 주의하셔야 합니다.</br>
+연애운/ 연애가 결혼으로 이어질 성공적인 시기입니다. </p>
+<p id="result5" class="Describe">the Emperor</br>
+직업운/ 정치인, 법관, 변호사, 고위관부, 건축가에 어울립니다.</br>
+건강운/ 고혈압, 간, 심장질환, 동맥경화, 심근경색, 당뇨, 무기력증 혈액순환에 유의하세요. </br>
+연애운/ 연애에서 주도권을 쥐게 됩니다.</p>
+<p id="result6" class="Describe">the Hierophant</br>
+직업운/ 교직자, 중개인, 중매인, 선생님, 학자, 성직자, 연구원 </br>
+건강운/ 목, 어깨, 팔의 질병에 주의하세요</br>
+연애운/ 온화하고 신중한 사랑을 하는 분입니다.</p>
+<p id="result7" class="Describe">the Lovers</br>
+직업운/ 로비스트, 예술가, 패션디자이너 등 예술적 감각이 뛰어납니다. </br>
+건강운/ 몸의 정가운데 부분인 신장, 간, 허리 쪽 질환을 주의하세요. </br>
+연애운/ 인연이 될 사람을 만나게 됩니다.</p>
+<p id="result8" class="Describe">the Chariot </br>
+직업운/ 운송업, 유통합, 여행관련 업종에 맞습니다.</br>
+건강운/ 멀미, 감기, 전염병, 근육통, 관절 등에 유의하세요. </br>
+연애운/ 애인과 여행을 가면 사이가 좋아질 것입니다.</p>
+<p id="result9" class="Describe">justice</br>
+직업운/ 조련사, 수의사, 운동코치 등에 맞습니다. </br>
+건강운/ 턱, 치과, 큰육통에 주의하세요. </br>
+연애운/ 당신은 매력적이고 정열적인 사람이군요.</p>
+<p id="result10" class="Describe">the Hermit</br>
+직업운/ 연구직, 학자,교수, 안내자에 맞습니다. </br>
+건강운/눈,귀,건망증, 치매에 유의하세요. </br>
+연애운/ 순수하고 비밀스러운 연인이 나타납니다.</p>
+<p id="result11" class="Describe">Wheel Of Fortune </br>
+직업운/ 가업을 잇거나 생명공학 등에 맞습니다.</br>
+건강운/순환기장애, 성신병, 수족냉증에 유의하세요. </br>
+연애운/ 인연을 만나거나 옛애인과의 재결합의 기회가 있습니다.</p>
+<p id="result12" class="Describe">Strength </br>
+직업운/ 판사, 변호사,검사,경찰 등 법관련 직업에 맞습니다.</br>
+건강운/ 눈질병, 시력약화, 각막등에 주의하세요. </br>
+연애운/ 애인에게 인정받는 일이 생깁니다.</p>
+<p id="result13" class="Describe">The Hanged Man </br>
+직업운/ 사회봉사 등 자원활동에 맞습니다.</br>
+건강운/ 다리쪽 질병, 관절염, 알콜및 약물중독에 유의하세요. </br>
+연애운/ 상대방을 위해 겸허해지세요.</p>
+<p id="result14" class="Describe">Death </br>
+직업운/ 장의업,상조회사,영매사,퇴마사,방사선과 등에 맞습니다.</br>
+건강운/ 위험한 일이 일어날수 있습니다. 다칠수 있는 사고에 주의하세요. </br>
+연애운/ 애인과 헤어지거나 애인의 마음이 변합니다. </p>
+<p id="result15" class="Describe">Temperance </br>
+직업운/ 관리직,매니저,딜러,펀드매니저 등이 맞습니다.</br>
+건강운/허리,방광,순화기등 통증등에 주의하세요. </br>
+연애운/ 당신은 좋은 상대를 만나고 있습니다.</p>
+<p id="result16" class="Describe">the Devil </br>
+직업운/ 오락,베팅 관련 사업에 재주가 있습니다.</br>
+건강운/ 불면등, 정서불안에 주의하세요. </br>
+연애운/ 상대방의 바람기에 주의하세요.</p>
+<p id="result17" class="Describe">the Tower </br>
+직업운/ 건설,부동산 관련 직업이 맞습니다.</br>
+건강운/종양, 급성 질환등에 주의하세요. </br>
+연애운/ 관계의 트러블이 생기거나 파국을 겪습니다.</p>
+<p id="result18" class="Describe">the Star </br>
+직업운/ 예술가,연예인,디자인에 맞습니다.</br>
+건강운/ 간질환, 육체피로에 주의하세요. </br>
+연애운/ 이상적인 상대를 만납니다.</p>
+<p id="result19" class="Describe">the Moon </br>
+직업운/ 점성가,천문학, 목욕탕업에 맞습니다.</br>
+건강운/우울증, 히스테리,편두통에 유의하세요. </br>
+연애운/ 불신,거짓,변덕으로 상처받는일이 일어납니다.</p>
+<p id="result20" class="Describe">the Sun </br>
+직업운/ 유치원 등 유아관련 일에 맞습니다.</br>
+건강운/피부,심장,호흡기질환에 주의하세요. </br>
+연애운/ 즐거운 연애를 할 기회가 옵니다.</p>
+<p id="result21" class="Describe">Judgement </br>
+직업운/ 첨단사업,it사업,이벤트,공연사업에 맞습니다.</br>
+건강운/ 치과,잇몸,호흡기,디스크에 주의하세요. </br>
+연애운/ 옛 애인과 재회하거나 현재 애인과의 갈등이 해결됩니다.</p>
+<p id="result22" class="Describe">the World</br>
+직업운/ 무용,예술,외국회사,통역,무역,외교관 등에 맞습니다. </br>
+건강운/자궁질환,순환기,혈압에 주의하세요. </br>
+연애운/외국인을 만나거나 최고의 연애상대를 만납니다.</p>
+
+<script src="js/storyboard.js"></script>
+</body>
+</html>

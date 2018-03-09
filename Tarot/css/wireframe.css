@@ -1,0 +1,190 @@
+  /*▣ 실기시험 2 (40점 만점)
+ 	작성자 : 이진주 
+ 	주제: 유기화학 내용정리,활용 공간틀
+ 	목적: 유기화학 내용을 정리,활용하는 틀을 제공한다
+ 	기능: 메뉴, 바탕화면색 변경, 작업창 수 변경*/
+
+
+header {
+    background: linear-gradient(to right,lightskyblue,transparent);
+	padding: 0px 0px 30px 0px;
+	margin: 0px;
+	height: 35px;
+	border: 4px solid white;
+}
+
+aside {
+	border: 1px solid white;
+}
+
+figure {
+	background-color: lightgray;
+	height: 350px;
+	padding: 0px;
+	margin: 0px;
+	border: 1px solid white;
+}
+
+.menu1,
+.menu2 {
+	list-style-type: none;
+}
+
+.menu1>li {
+	margin: 3px 0px 0px 0px;
+	padding: 0px;
+	overflow: hidden;
+	height: 1.25em;
+}
+
+.menu1 > li:hover {
+	overflow: initial;
+	height: auto;
+}
+
+.menu1 a {
+	text-decoration: none;
+}
+
+.submenu >li {
+	list-style-type: none;
+}
+
+.menu2 > li {
+	float: left;
+	padding: 0px 20px;
+}
+
+.frame {
+	display: none;
+	/*2-6번째 창은 안보이게*/
+}
+
+#frame1 {
+	display: inline;
+	/*1번째 창은 보이게*/
+}
+
+[class*="col-"] {
+	float: left;
+}
+
+.row::after {
+	content: "";
+	clear: both;
+	display: block;
+}
+
+#resource{ 
+	/*기록할 작업내용은 보이지 않도록 처리하였다.*/
+	display: none;
+}
+
+.iframes{
+	/*링크해서 불러올 사이트를 담을 iframe의 사이즈 지정*/
+	width:99%; 
+	height:310px;
+}
+
+footer {
+	background: linear-gradient(to right,darkseagreen,transparent);
+	position: relative;
+	padding: 0px 2px 10px 0px;
+	border: 1px solid white;
+}
+
+@media screen and (max-width:768px) {
+	.col-m-1 {
+		width: 8.33%;
+    }
+	.col-m-2 {
+		width: 16.66%;
+	}
+	.col-m-3 {
+		width: 25%;
+	}
+	.col-m-4 {
+		width: 33.33%;
+	}
+	.col-m-5 {
+		width: 41.66%;
+	}
+	.col-m-default {
+		width: 49%;
+	}
+	.col-m-6 {
+		width: 50%;
+	}
+	.col-m-7 {
+		width: 58.33%;
+	}
+	.col-m-8 {
+		width: 66.66%;
+	}
+	.col-m-9 {
+		width: 75%;
+	}
+	.col-m-10 {
+		width: 83.33%;
+	}
+	.col-m-11 {
+		width: 91.66%;
+	}
+	.col-m-defaultx2 {
+		width: 98%;
+	}
+	.col-m-12 {
+		width: 100%;
+	}
+	article {
+		display: none;
+	}
+}
+
+@media screen and (min-width:768px) {
+	.col-1 {
+		width: 8.33%;
+	}
+	.col-2 {
+		width: 16.66%;
+	}
+	.col-21 {
+		width: 23.8%;
+	}
+	.col-3 {
+		width: 25%;
+	}
+	.col-4 {
+		width: 33.33%;
+	}
+	.col-5 {
+		width: 41.66%;
+	}
+	.col-default {
+		width: 49%;
+	}
+	.col-6 {
+		width: 50%;
+	}
+	.col-7 {
+		width: 58.33%;
+	}
+	.col-8 {
+		width: 66.66%;
+	}
+	.col-9 {
+		width: 75%;
+	}
+	.col-10 {
+		width: 83.33%;
+	}
+	.col-11 {
+		width: 91.66%;
+	}
+	.col-defaultx2 {
+		width: 98%;
+	}
+	.col-12 {
+		width: 100%;
+	}
+}

@@ -1,0 +1,286 @@
+<!--▣ 실기시험 2 (40점 만점)
+작성자 : 이진주 
+주제: 유기화학 내용정리,활용 공간틀
+목적: 유기화학 내용을 정리,활용하는 틀을 제공한다
+기능: 메뉴, 바탕화면색 변경, 작업창 수 변경-->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>wireframe.html</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="css/wireframe.css" rel="stylesheet">
+
+</head>
+<body>
+<fieldset>
+<legend>실기시험 2</legend>
+<ol>
+<li>작성자 : 이진주 </li>
+<li>주제: 유기화학 내용정리,활용 공간틀</li>
+<li>목적: 유기화학 내용을 정리,활용하는 틀을 제공한다.</li>
+<li>기능: 메뉴, 바탕화면색 변경, 작업창 수 변경</li>
+</ol>
+</fieldset>
+
+<header class="col-defaultx2 col-m-12">
+<h2>&nbsp;&nbsp;&nbsp;Organic Chemistry</h2>
+</header>
+
+<section class="row">
+<aside class="col-3 col-m-12">
+<ul class="menu1" style="border:1px solid lightgray; margin:0px 0px 0px 2px;">
+<li><a href="#">구조,결합,산염기</a>
+	<ul class="submenu">
+		<li onclick="listname(1)"><a href="#">주기율표</a></li>
+		<li onclick="listname(2)"><a href="#">결합</a></li>
+		<li onclick="listname(3)"><a href="#">Lewis구조</a></li>
+		<li onclick="listname(4)"><a href="#">이성질체</a></li>
+		<li onclick="listname(5)"><a href="#">팔전자규칙의 예외</a></li>
+		<li onclick="listname(6)"><a href="#">공명</a></li>
+		<li onclick="listname(7)"><a href="#">분자모양 결정하기</a></li>
+		<li onclick="listname(8)"><a href="#">유기구조그리기</a></li>
+		<li onclick="listname(9)"><a href="#">혼성화</a></li>
+		<li onclick="listname(10)"><a href="#">결합길이와 결합세기</a></li>
+		<li onclick="listname(11)"><a href="#">전기음성도와 결합극성</a></li>
+		<li onclick="listname(12)"><a href="#">분자의 극성</a></li>
+		<li onclick="listname(13)"><a href="#">Bronsted-Lowry 산염기</a></li>
+		<li onclick="listname(14)"><a href="#">산의 세기와 pKa</a></li>
+		<li onclick="listname(15)"><a href="#">산염기반응 결과예측</a></li>
+	</ul>
+</li>
+<li><a href="#">유기반응</a>
+	<ul class="submenu">
+		<li onclick="listname(16)"><a href="#">작용기</a></li>
+		<li onclick="listname(17)"><a href="#">분자간힘</a></li>
+		<li onclick="listname(18)"><a href="#">물리적성질</a></li>
+		<li onclick="listname(19)"><a href="#">유기반응의 이해</a></li>
+	</ul>
+</li>
+<li><a href="#">알케인, 알켄, 알카인</a>
+	<ul class="submenu">
+		<li onclick="listname(20)"><a href="#">알케인</a></li>
+		<li onclick="listname(21)"><a href="#">알켄</a></li>
+		<li onclick="listname(22)"><a href="#">알카인</a></li>
+	</ul>
+</li>
+<li><a href="#">할로젠화알킬</a>
+	<ul class="submenu">
+		<li onclick="listname(23)"><a href="#">Sn2</a></li>
+		<li onclick="listname(24)"><a href="#">Sn1</a></li>
+		<li onclick="listname(25)"><a href="#">E1</a></li>
+		<li onclick="listname(26)"><a href="#">E2</a></li>
+	</ul>
+</li>
+<li><a href="#">알코올,에터,에폭사이드</a>
+	<ul class="submenu">
+		<li onclick="listname(27)"><a href="#">알코올</a></li>
+		<li onclick="listname(28)"><a href="#">에터</a></li>
+		<li onclick="listname(29)"><a href="#">에폭사이드</a></li>
+	</ul>
+</li>
+<li><a href="#">콘쥬게이션,공명,다이엔</a></li>
+<li><a href="#">벤젠과 방향족 화합물</a></li>
+<li><a href="#">카보닐화학</a>
+	<ul class="submenu">
+		<li onclick="listname(30)"><a href="#">알데하이드</a></li>
+		<li onclick="listname(31)"><a href="#">케톤</a></li>
+		<li onclick="listname(32)"><a href="#">카복실산</a></li>
+	</ul>
+</li>
+<li><a href="#">반응모음</a>
+	<ul class="submenu">
+		<li onclick="listname(33)"><a href="#">C-C결합 형성반응</a></li>
+		<li onclick="listname(34)"><a href="#">라디칼반응</a></li>
+		<li onclick="listname(35)"><a href="#">산화반응</a></li>
+		<li onclick="listname(36)"><a href="#">고리형 협동 반응</a></li>
+	</ul>
+</li>
+</aside>
+
+<aside class="col-21 col-m-12">
+<!--창 갯수를 설정하는 갯수만큼만 보여준다-->
+<label for="frameNumber">창갯수
+<input id="frameNumber" type="number" min="0" max="7" value="1" oninput="showFrame(value)">
+</label>
+</aside>
+
+<figure class="frame col-default col-m-12" id="frame1">
+<label for="color">&nbsp; </label>
+<input type="text" placeholder="bgcolor" size="5" onchange="frame1.style['background-color']=this.value">
+<label for="color"></label>
+<input type="text" value="" placeholder="subject" size="20" onclick="clicked(1)">
+<div id="subframe1"></div>
+
+</figure>
+<figure class="frame col-default col-m-12" id="frame2">
+<label for="color">&nbsp;  </label>
+<input type="text" placeholder="bgcolor" size="5" onchange="frame2.style['background-color']=this.value">
+<label for="color"></label>
+<input type="text" placeholder="subject" size="20" onclick="clicked(2)">
+<div id="subframe2"></div>
+
+
+</figure>
+<figure class="frame col-default col-m-12" id="frame3">
+<label for="color">&nbsp; </label>
+<input type="text" placeholder="bgcolor" size="5" onchange="frame3.style['background-color']=this.value">
+<label for="color"></label>
+<input type="text" placeholder="subject" size="20" onclick="clicked(3)">
+<div id="subframe3"></div>
+</figure>
+
+<figure class="frame col-default col-m-12" id="frame4">
+<label for="color">&nbsp; </label>
+<input type="text" placeholder="bgcolor" size="5" onchange="frame4.style['background-color']=this.value">
+<label for="color"></label>
+<input type="text" placeholder="subject" size="20" onclick="clicked(4)">
+<div id="subframe4"></div>
+</figure>
+
+<figure class="frame col-default col-m-12" id="frame5">
+<label for="color">&nbsp;  </label>
+<input type="text" placeholder="bgcolor" size="5" onchange="frame5.style['background-color']=this.value">
+<label for="color"></label>
+<input type="text" placeholder="subject" size="20" onclick="clicked(5)">
+<div id="subframe5"></div>
+</figure>
+
+<figure class="frame col-default col-m-12" id="frame6">
+<label for="color">&nbsp;  </label>
+<input type="text" placeholder="bgcolor" size="5" onchange="frame6.style['background-color']=this.value">
+<label for="color"></label>
+<input type="text" placeholder="subject" size="20" onclick="clicked(6)">
+<div id="subframe6"></div>
+</figure>
+
+<figure class="frame col-default col-m-12" id="frame7">
+<label for="color">&nbsp; </label>
+<input type="text" size="5" onchange="frame7.style['background-color']=this.value">
+<label for="color"></label>
+<input type="text" placeholder="subject" size="20" onclick="clicked(7)">
+<div id="subframe7"></div>
+</figure>
+</section>
+
+<section id="resource">
+<div id="resource1">
+<p><iframe class="iframes" src="http://www.rsc.org/periodic-table"></iframe></p>
+</div>
+<div id="resource2">
+<p><iframe class="iframes" src="http://www.chemguide.co.uk/basicorg/bonding/orbitals.html#top"></iframe></p>
+</div>
+<div id="resource3">
+<p><iframe class="iframes" src="http://www.masterorganicchemistry.com/2010/08/14/from-gen-chem-to-org-chem-pt-7-lewis-structures/"></iframe></p>
+</div>
+<div id="resource4">
+<p>이성질체 내용...</p>
+</div>
+<div id="resource5">
+<p>팔전자규칙의 예외 내용...</p>
+</div>
+<div id="resource6">
+<p>공명 내용...</p>
+</div>
+<div id="resource7">
+<p>분자모양 결정하기 내용...</p>
+</div>
+<div id="resource8">
+<p>유기구조그리기 내용...</p>
+</div>
+<div id="resource9">
+<p>혼성화 내용...</p>
+</div>
+<div id="resource10">
+<p>결합길이와 결합세기 내용...</p>
+</div>
+<div id="resource11">
+<p>전기음성도와 결합극성 내용...</p>
+</div>
+<div id="resource12">
+<p>분자의 극성 내용...</p>
+</div>
+<div id="resource13">
+<p>Bronsted-Lowry 산염기내용...</p>
+</div>
+<div id="resource14">
+<p>산의 세기와 pKa 내용...</p>
+</div>
+<div id="resource15">
+<p>산염기반응 결과예측 내용...</p>
+</div>
+<div id="resource16">
+<p>작용기 내용...</p>
+</div>
+<div id="resource17">
+<p>분자간힘 내용...</p>
+</div>
+<div id="resource18">
+<p>물리적성질 내용...</p>
+</div>
+<div id="resource19">
+<p>유기반응의 이해 내용...</p>
+</div>
+<div id="resource20">
+<p>알케인 내용...</p>
+</div>
+<div id="resource21">
+<p>알켄 내용...</p>
+</div>
+<div id="resource22">
+<p>알카인 내용...</p>
+</div>
+<div id="resource23">
+<p>Sn2 내용...</p>
+</div>
+<div id="resource24">
+<p>Sn1 내용...</p>
+</div>
+<div id="resource25">
+<p>E1 내용...</p>
+</div>
+<div id="resource26">
+<p>E2 내용...</p>
+</div>
+<div id="resource27">
+<p>알코올 내용...</p>
+</div>
+<div id="resource28">
+<p>에터 내용...</p>
+</div>
+<div id="resource29">
+<p>에폭사이드 내용...</p>
+</div>
+<div id="resource30">
+<p>알데하이드 내용...</p>
+</div>
+<div id="resource31">
+<p>케톤 내용...</p>
+</div>
+<div id="resource32">
+<p>카복실산 내용...</p>
+</div>
+<div id="resource33">
+<p>c-c결합 형성반응 내용...</p>
+</div>
+<div id="resource34">
+<p>라디칼반응 내용...</p>
+</div>
+<div id="resource35">
+<p>산화반응 내용...</p>
+</div>
+<div id="resource36">
+<p>고리형협동반응 내용...</p>
+</div>
+</section>
+
+<footer class="col-defaultx2 col-m-12">
+<ul class="menu2">
+<li>찾아보기</li>
+<li>참고자료</li>
+<li>2016.11.27</li>
+</ul>
+</footer>
+<script src="js/wireframe.js"></script>
+</body>
+</html>

@@ -1,0 +1,195 @@
+
+/*▣ 실기시험 1 (40점 만점)
+-작성자 : 이진주 (5강의실)
+-주 제  : 타로운세를 보는 페이지
+-목 적  : 방문자의 타로운세를 보는 페이지를 제작한다. 
+(해석 발췌: 네이버블로거 tarotw님 http://blog.naver.com/tarotw/220017883489)
+-기 능 : 메뉴, 카드 애니메이션 */
+
+
+	#description{
+		color:lightgray;
+	}
+
+	html,body {
+		height: 100%;
+		margin: 0;
+	}
+	
+	body {
+		background-size:cover;
+		align-items: center;
+		font-family:'Alegreya SC',monospace;
+
+	}
+	
+	#menu{
+		background-color: rgba(255, 255, 255, 0.2);
+		height: 80px;
+		color:lightgray;
+		padding: 0px 0px 0px 50px;;
+	}
+	
+	#menu1 a {
+		color:lightgray;
+		text-decoration: none;
+	}
+	
+	#menu1>li {
+		font-size:1.3em;
+		float: left;
+		margin: 20px;
+		list-style-type: none;
+	}
+	
+	#menu1>li:hover {
+		height: auto;
+	}
+	
+	fieldset {
+		border: 0px;
+		padding: 0px;
+	}
+	
+	.container {
+		/*각 카드자리에 위치한 사각틀*/
+		width: 100px;
+		height: 150px;
+		margin: 10px;
+		position: relative;
+		-webkit-perspective: 800px;
+		-ms-perspective: 800px;
+		perspective: 800px;
+		float: left;
+	}
+	
+	.no22 {
+		/*22번째 카드의 위치를 올려서 강제지정해 주었음*/
+		position: relative;
+		top: -170px;
+	}
+	
+	.card {
+		/*카드 앞뒷면 사이에 낀 중심사각형*/
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		-webkit-transform-style: preserve-3d;
+		transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+		border-radius: 6px;
+		cursor: pointer;
+	}
+	
+	.card div {
+		/*카드의 공통속성을 기술*/
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		-webkit-backface-visibility: hidden;
+		backface-visibility: hidden;
+		border-radius: 6px;
+		background: #fff;
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		-webkit-justify-content: center;
+		justify-content: center;
+		-webkit-box-align: center;
+		-o-box-align: center;
+		-ms-flex-align: center;
+		-webkit-align-items: center;
+		align-items: center;
+	}
+	
+	.card .back {
+		-webkit-transform: rotateY(180deg);
+		transform: rotateY(180deg);
+	}
+	
+	.card.flipped {
+		-webkit-transform: rotateY(180deg);
+		transform: rotateY(180deg);
+	}
+		
+	p.Describe{
+		/*카드해석을 숨겨놓았다.*/
+		display: none;
+	}
+
+	h2{
+		/*카드한장을 선택하세요 메시지를 숨겨놓았다*/
+		display: none;
+		color:lightgray;
+	}
+	
+	.le {
+		/*카드3장씩 묶은 fieldset. 바로 옆에 가로로 붙을수있도록 float:left를 주었다*/
+		width:100%;
+		float: left;
+		visibility: hidden;
+	}
+	
+	.button {
+		visibility: hidden;
+	}
+	
+	.button {
+		position: relative;
+		left:45%;
+		background-color: slategray;
+		border: none;
+		color: white;
+		padding: 15px 32px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		margin: 4px 2px;
+		cursor: pointer;
+	}
+
+	.back img{
+		/*카드이미지를 틀의 크기에 맞게 조정*/
+		width: 100px;		
+	}
+	
+		/*카드해석결과를 담을 장소이다. 처음에는 숨겨놓은 상태이다. 결과보기를 클릭하면  display:block 으로 변경시킨다.*/
+	h3{
+		display: none;
+		padding:10px 10px 10px 50px;
+		line-height: 300%;
+		color:white;
+		font-weight: 100;
+	}
+
+	.a{
+		height:160px;
+	}
+
+
+	@media screen and (max-width:600px){
+	.container {
+		/*각 카드자리에 위치한 사각틀*/
+		width: 70px;
+		height: 105px;
+		margin: 5px;
+	}
+
+	#menu1 a {
+		font-size:17px;
+	}
+
+	h2{	
+		font-size:17px;
+	}
+
+	h3{
+		font-size:16px;
+	}
+
+	.a{
+		height:110px;
+	}
+
+	}
+		
